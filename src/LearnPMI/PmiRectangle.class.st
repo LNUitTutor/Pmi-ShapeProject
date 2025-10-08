@@ -3,7 +3,7 @@
 "
 Class {
 	#name : 'PmiRectangle',
-	#superclass : 'Object',
+	#superclass : 'PmiFlatShape',
 	#instVars : [
 		'a',
 		'b'
@@ -37,7 +37,7 @@ PmiRectangle >> a [
 
 { #category : 'accessing' }
 PmiRectangle >> a: aNumber [ 
-	a := aNumber max: 0.1
+	a := aNumber max: self class minimalSize 
 ]
 
 { #category : 'calculating' }
@@ -54,7 +54,7 @@ PmiRectangle >> b [
 
 { #category : 'accessing' }
 PmiRectangle >> b: aNumber [ 
-	b := aNumber max: 0.1
+	b := aNumber max: self class minimalSize 
 ]
 
 { #category : 'initialization' }
