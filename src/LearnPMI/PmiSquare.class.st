@@ -17,6 +17,12 @@ PmiSquare class >> newFrom: aPoint [
 ]
 
 { #category : 'instance creation' }
+PmiSquare class >> newWithA: aSide [
+
+	^ self basicNew a: aSide
+]
+
+{ #category : 'instance creation' }
 PmiSquare class >> newWithA: width andB: high [
 
 	^ self basicNew a: width

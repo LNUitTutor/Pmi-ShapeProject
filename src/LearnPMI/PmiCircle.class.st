@@ -8,6 +8,12 @@ Class {
 	#package : 'LearnPMI'
 }
 
+{ #category : 'instance creation' }
+PmiCircle class >> newWithR: r [
+
+	^ self basicNew r: r
+]
+
 { #category : 'calculating' }
 PmiCircle >> area [
 
@@ -24,6 +30,15 @@ PmiCircle >> initialize [
 PmiCircle >> perimeter [
 
 	^ 2.0 * Float pi * self r
+]
+
+{ #category : 'printing' }
+PmiCircle >> printOn: aStream [
+
+	aStream
+		nextPutAll: 'Circle(';
+		print: self r;
+		nextPut: $)
 ]
 
 { #category : 'accessing' }
